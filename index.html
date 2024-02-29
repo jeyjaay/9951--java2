@@ -3,30 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script 2</title>
+    <title>Script 3</title>
 </head>
-<body onload="exibirMensagem()">
+<body>
+    <input type="text" id="inputText" placeholder="Digite uma string">
+    <button onclick="processInput()">Processar</button>
+
     <script>
-        function exibirMensagem() {
+        function processInput() {
             
-            if (confirm("Você está gostando do curso?")) {
-                
-                document.body.innerHTML = "<h1>Parabéns!</h1>";
-            } else {
-                
-                document.body.innerHTML = "<h1>Que pena!</h1>";
-            }
+            var inputString = document.getElementById("inputText").value;
 
-            alert("Bem-vindo à recuperação de JavaScript!");
+            var tamanho = inputString.length;
 
-            
-            var numero1 = 5;
-            var numero2 = 3;
+            var maiuscula = inputString.toUpperCase();
 
-      
-            var resultado = numero1 + numero2;
+          
+            var minuscula = inputString.toLowerCase();
 
-            document.body.innerHTML += "<p>A soma é: " + resultado + "</p>";
+            document.body.innerHTML += "<p>Tamanho da string: " + tamanho + "</p>";
+            document.body.innerHTML += "<p>String em maiúsculo: " + maiuscula + "</p>";
+            document.body.innerHTML += "<p>String em minúsculo: " + minuscula + "</p>";
         }
     </script>
 </body>
